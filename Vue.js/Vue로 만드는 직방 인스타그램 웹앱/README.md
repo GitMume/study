@@ -1,3 +1,3 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-tVaahsXpwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+[![Vue 0강 : 카카오가 리액트냅두고 Vue 쓰는 이유](http://img.youtube.com/vi/-tVaahsXpwk/0.jpg)](https://youtu.be/-tVaahsXpwk)
 
-을 보고 따라하기!
+강의 보고 따라하기!
