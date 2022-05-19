@@ -5,7 +5,7 @@
   <div>
     <h4>{{ products[0] }}</h4>
     <p>50 만원</p>
-    <button @click="신고수++">허위매물신고</button> <span>신고수 : {{신고수}}</span>
+    <button @click="신고수+=1">허위매물신고</button> <span>신고수 : {{신고수}}</span>
   </div>
   <div>
     <h4>{{ products[1] }}</h4>
