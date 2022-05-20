@@ -4,6 +4,7 @@
   </div>
   
   <div v-for="(a,i) in 신고수" :key="i">
+  <img src="./assets/room0.jpg"
     <h4>{{ products[i] }}</h4>
     <p>50 만원</p>
     <button @click="신고수[i]++">허위매물신고</button> <span>신고수 : {{신고수[i]}}</span>
