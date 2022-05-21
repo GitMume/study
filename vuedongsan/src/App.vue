@@ -12,20 +12,17 @@
     <a v-for="작명 in 메뉴들" :key="작명">{{ 작명 }}</a>
   </div>
 
-  
-  <!--
-  <div v-for="(a,i) in 신고수" :key="i">
-  <img src="./assets/room0.jpg">
-    <h4>{{ products[i] }}</h4>
-    <p>50 만원</p>
-    <button @click="신고수[i]++">허위매물신고</button> <span>신고수 : {{신고수[i]}}</span>
+  <div v-for="(item,index) in 원룸들" :key="index">
+    <img :src="원룸들[index].image" class="room-img">
+    <h4>{{ 원룸들[index].title }}</h4>
+    <p>{{ 원룸들[index].price }}원</p>
   </div>
-  -->
-  
+
+  <!--
   <div>
-      <img src="./assets/room0.jpg" class="room-img">
-    <h4 @click="모달창열렸니 = true">{{ products[0] }}</h4>
-    <p>50 만원</p>
+      <img :src="원룸들[0].image" class="room-img">
+    <h4 @click="모달창열렸니 = true">{{ 원룸들[0].title }}</h4>
+    <p>{{원룸들[0].price}}원</p>
     <button @click="신고수[0]++">허위매물신고</button> <span>신고수 : {{신고수[0]}}</span>
   </div>
   <div>
@@ -40,20 +37,25 @@
     <p>가격은 아무거나</p>
     <button @click="신고수[2]++">허위매물신고</button> <span>신고수 : {{신고수[2]}}</span>
   </div>
+  -->
 </template>
 
 <script>
 //document.getElementById().innerHTML = ??  기존의 자바스크립트 문법.
+
+import data from './assets/oneroom.js';
 
 export default {
   name: "App",
   data() {
     //데이터 보관 통, 데이터는 object형으로 저장
     return {
+      원룸들 : data,
       모달창열렸니 : false,
       신고수 : [0,0,0],
       메뉴들: ["Home", "Shop", "About"],
       products: ["역삼동원룸", "천호동원룸", "마포구원룸"],
+      
     };
   },
   methods :{
@@ -84,7 +86,7 @@ div{
   padding:20px;
 }
 .room-img{
-  width:100%;
+  width:80%;
   margin-top:40px;
 }
 #app {
